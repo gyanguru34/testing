@@ -1,0 +1,28 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+
+
+.customnode{
+  
+  float: left;
+  text-align: left;
+  min-width:250px;
+  /* justify-content: center;
+  align-items: center; */
+   border: 2px solid rgb(97, 110, 87);
+   background-color: grey;
+   border-radius: 3px;
+   padding: 10px;
+
+}
+
+.add-node{
+
+  position: absolute;
+  bottom: 30px;
+  left: 100px;
+}
