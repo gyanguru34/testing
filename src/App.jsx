@@ -46,7 +46,8 @@ export default function App() {
         edges={edges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
-        onConnect={onConnects}
+        onConnect={onConnect}
+        googlefufufuf
         nodeTypes={nodeTypes}
       >
         <Controls />
