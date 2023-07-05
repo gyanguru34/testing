@@ -2,7 +2,7 @@
 import { Handle, Position } from 'reactflow';
 import React, { useState } from 'react';
 
-const CustomNode = () => {
+const CustomNode = ({data}) => {
 
 
   const [inputs, setInputs] = useState([{ name: '', value: '' }]);
@@ -49,6 +49,8 @@ const CustomNode = () => {
       <div className='customnode'>
      
     <Handle type="target" position={Position.Top} id="a"  />
+    <div className="label-wrapper">Name : {data.label}</div>
+
     <form onSubmit={handleSubmit}>  
       <label>
         Fx : 
