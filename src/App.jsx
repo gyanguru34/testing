@@ -52,11 +52,12 @@ export default function App() {
         type:'customNode',
         data: {label: `${name}`},
         position: {x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight}
-        
+
     }))
 };
 
   const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [setEdges]);
+  
 
   return (
     <ReactFlowProvider> 
