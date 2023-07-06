@@ -12,8 +12,7 @@ import ReactFlow, {
 import './App.css'
 
 import 'reactflow/dist/style.css';
-
-import CustomNode from './component/trial';
+import CustomNode from './component/CustomNode.jsx';
 import Sidebar from './component/sidebar';
 
 const initialNodes = [

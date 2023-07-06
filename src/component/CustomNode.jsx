@@ -7,6 +7,15 @@ const CustomNode = ({data}) => {
 
   const [inputs, setInputs] = useState([{ name: '', value: '' }]);
 
+
+  const [selectedMethod, setSelectedMethod] = useState(null);
+
+  const methods = [
+    { value: 'method1', label: 'Method 1' },
+    { value: 'method2', label: 'Method 2' },
+    { value: 'method3', label: 'Method 3' },
+  ];
+
   const handleChange = (index, event) => {
     const newInputs = [...inputs];
     newInputs[index].value = event.target.value;
@@ -25,10 +34,15 @@ const CustomNode = ({data}) => {
     setInputs(newInputs);
   };
 
+  const handleMethodChange = (event) => {
+    setSelectedMethod(event.target.value);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = {
       eq: event.target.elements.eq.value,
+      method: selectedMethod,
       var: parseVarInputs(inputs),
     };
     alert(JSON.stringify(formData));
@@ -56,6 +70,7 @@ const CustomNode = ({data}) => {
         Fx : 
         <input type="text" name="eq" />
       </label>
+      
 
       {inputs.map((input, index) => (
         <div key={index}>
@@ -79,6 +94,15 @@ const CustomNode = ({data}) => {
       <button type="button" onClick={handleAddInput}>
         Add Input
       </button>
+      <label>
+          Method:
+          <select value={selectedMethod} onChange={handleMethodChange}>
+            <option value="">Select Method</option>
+            <option value="method1">Method 1</option>
+            <option value="method2">Method 2</option>
+            <option value="method3">Method 3</option>
+          </select>
+        </label>
       <button type="submit">Run</button>
       
     </form>
