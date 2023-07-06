@@ -2,13 +2,12 @@
 import { Handle, Position } from 'reactflow';
 import React, { useState } from 'react';
 
+
 const CustomNode = ({data}) => {
 
-
   const [inputs, setInputs] = useState([{ name: '', value: '' }]);
-
-
   const [selectedMethod, setSelectedMethod] = useState(null);
+  
 
   const methods = [
     { value: 'method1', label: 'Method 1' },
